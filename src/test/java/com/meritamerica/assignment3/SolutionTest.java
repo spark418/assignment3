@@ -46,10 +46,10 @@ import java.util.Date;
 
 public class SolutionTest {
 	
-	@Rule
+
 	public ExpectedException exceptionRule = ExpectedException.none();
 
-    @Test
+ 
     public void testCreateAccountHolder(){
         AccountHolder accountHolder = new AccountHolder(
         	"Sadiq",
@@ -66,7 +66,7 @@ public class SolutionTest {
         assertEquals(0, accountHolder.getNumberOfSavingsAccounts());
     }
 
-    @Test
+
     public void testDepositPositiveAmountInCheckingAccount(){
     	AccountHolder accountHolder = new AccountHolder(
             	"Sadiq",
@@ -79,7 +79,7 @@ public class SolutionTest {
         assertEquals(true, checkingAccount.deposit(500.0));
     }
 
-    @Test
+
     public void testDepositNegativeAmountInCheckingAccount(){
     	AccountHolder accountHolder = new AccountHolder(
             	"Sadiq",
@@ -92,7 +92,7 @@ public class SolutionTest {
         assertEquals(false, checkingAccount.deposit(-500.0));
     }
 
-    @Test
+
     public void testDepositPositiveAmountInSavingsAccount(){
     	AccountHolder accountHolder = new AccountHolder(
             	"Sadiq",
@@ -105,7 +105,7 @@ public class SolutionTest {
         assertEquals(true, savingsAccount.deposit(500.0));
     }
 
-    @Test
+
     public void testDepositNegativeAmountInSavingsAccount(){
     	AccountHolder accountHolder = new AccountHolder(
             	"Sadiq",
@@ -118,7 +118,7 @@ public class SolutionTest {
         assertEquals(false, savingsAccount.deposit(-500.0));
     }
 
-    @Test
+
     public void testWithdrawAmountExceedingBalanceInCheckingAccount(){
     	AccountHolder accountHolder = new AccountHolder(
             	"Sadiq",
@@ -131,7 +131,7 @@ public class SolutionTest {
         assertEquals(false, checkingAccount.withdraw(500.0));
     }
 
-    @Test
+
     public void testWithdrawAmountExceedingBalanceInSavingsAccount(){
     	AccountHolder accountHolder = new AccountHolder(
             	"Sadiq",
@@ -144,7 +144,7 @@ public class SolutionTest {
         assertEquals(false, savingsAccount.withdraw(500.0));
     }
     
-    @Test
+ 
     public void testWithdrawFromCDAccount(){
     	AccountHolder accountHolder = new AccountHolder(
             	"Sadiq",
@@ -157,7 +157,7 @@ public class SolutionTest {
         assertEquals(false, cdAccount.withdraw(500.0));
     }
     
-    @Test
+   
     public void testDepositIntoCDAccount(){
     	AccountHolder accountHolder = new AccountHolder(
             	"Sadiq",
@@ -170,7 +170,7 @@ public class SolutionTest {
         assertEquals(false, cdAccount.deposit(500.0));
     }
 
-    @Test
+  
     public void testFutureValueInSavingsAccount(){
         AccountHolder accountHolder = new AccountHolder(
         	"Sadiq",
@@ -185,7 +185,7 @@ public class SolutionTest {
         assertEquals(fv, savingsAccount.futureValue(3), 0);
     }
 
-    @Test
+
     public void testFutureValueInCheckingAccount(){
         AccountHolder accountHolder = new AccountHolder(
         	"Sadiq",
@@ -200,7 +200,7 @@ public class SolutionTest {
         assertEquals(fv, checkingAccount.futureValue(3), 0);
     }
     
-    @Test
+  
     public void testFutureValueInCDAccount(){
         AccountHolder accountHolder = new AccountHolder(
         	"Sadiq",
